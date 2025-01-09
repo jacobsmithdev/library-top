@@ -16,3 +16,7 @@ function appendToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
     library.push(book);
 }
+
+appendToLibrary('The Hobbit', 'J.R.R. Tolkien', 295, true);
+appendToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 608, true);
+appendToLibrary('Great Expectations', 'Charles Dickens', 544, false);
