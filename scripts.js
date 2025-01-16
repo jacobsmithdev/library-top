@@ -1,6 +1,7 @@
 const libraryDisplay = document.querySelector('#library-display');
 const openBookModal = document.querySelector('#open-book-modal');
 const bookModal = document.querySelector('#book-modal');
+const addBook = document.querySelector('#add-book');
 
 const library = [];
 
@@ -45,6 +46,17 @@ function updateLibraryDisplay() {
 
 openBookModal.addEventListener('click', () => {
     bookModal.showModal();
+})
+
+addBook.addEventListener('click', () => {
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#read').checked;
+    if (title && author && pages) {
+        appendToLibrary(title, author, pages, read);
+        updateLibraryDisplay();
+    }
 })
 
 appendToLibrary('The Hobbit', 'J.R.R. Tolkien', 295, true);
