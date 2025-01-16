@@ -1,4 +1,6 @@
 const libraryDisplay = document.querySelector('#library-display');
+const openBookModal = document.querySelector('#open-book-modal');
+const bookModal = document.querySelector('#book-modal');
 
 const library = [];
 
@@ -40,6 +42,10 @@ function updateLibraryDisplay() {
         libraryDisplay.append(tr);
     })
 }
+
+openBookModal.addEventListener('click', () => {
+    bookModal.showModal();
+})
 
 appendToLibrary('The Hobbit', 'J.R.R. Tolkien', 295, true);
 appendToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 608, true);
