@@ -49,7 +49,7 @@ function updateLibraryDisplay() {
 function createDeleteBtnFor(bookRow) {
     const index = bookRow.dataset.index;
 
-    let deleteBtn = document.createElement('button');
+    const deleteBtn = document.createElement('button');
     deleteBtn.innerText = "delete";
 
     deleteBtn.addEventListener('click', () => {
