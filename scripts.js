@@ -41,7 +41,6 @@ function updateLibraryDisplay() {
 
         const deleteBtn = document.createElement('button');
         deleteBtn.innerText = "delete";
-        deleteBtn.dataset.index = index;
         deleteBtn.addEventListener('click', () => {
             library.splice(tr.dataset.index, 1);
             updateLibraryDisplay();
