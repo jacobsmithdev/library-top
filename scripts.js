@@ -26,8 +26,8 @@ function updateLibraryDisplay() {
     libraryDisplay.innerText = '';
 
     library.forEach((book, index) => {
-        const tr = document.createElement('tr');
-        tr.dataset.index = index;
+        const bookRow = document.createElement('tr');
+        bookRow.dataset.index = index;
         
         const title = document.createElement('td');
         const author = document.createElement('td');
@@ -42,12 +42,12 @@ function updateLibraryDisplay() {
         const deleteBtn = document.createElement('button');
         deleteBtn.innerText = "delete";
         deleteBtn.addEventListener('click', () => {
-            library.splice(tr.dataset.index, 1);
+            library.splice(bookRow.dataset.index, 1);
             updateLibraryDisplay();
         });
 
-        tr.append(title, author, pages, read, deleteBtn);
-        libraryDisplay.append(tr);
+        bookRow.append(title, author, pages, read, deleteBtn);
+        libraryDisplay.append(bookRow);
     })
 }
 
