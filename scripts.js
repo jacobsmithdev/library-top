@@ -39,16 +39,25 @@ function updateLibraryDisplay() {
         pages.innerText = book.pages;
         read.innerText = book.read ? 'Read' : 'Unread';
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.innerText = "delete";
-        deleteBtn.addEventListener('click', () => {
-            library.splice(bookRow.dataset.index, 1);
-            updateLibraryDisplay();
-        });
+        const deleteBtn = createDeleteBtnFor(bookRow);
 
         bookRow.append(title, author, pages, read, deleteBtn);
         libraryDisplay.append(bookRow);
     })
+}
+
+function createDeleteBtnFor(bookRow) {
+    const index = bookRow.dataset.index;
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.innerText = "delete";
+
+    deleteBtn.addEventListener('click', () => {
+        library.splice(index, 1);
+        updateLibraryDisplay();
+    });
+
+    return deleteBtn;
 }
 
 openBookModal.addEventListener('click', () => {
