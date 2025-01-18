@@ -32,16 +32,15 @@ function updateLibraryDisplay() {
         const title = document.createElement('td');
         const author = document.createElement('td');
         const pages = document.createElement('td');
-        const read = document.createElement('td');
 
         title.innerText = book.title;
         author.innerText = book.author;
         pages.innerText = book.pages;
-        read.innerText = book.read ? 'Read' : 'Unread';
 
         const deleteBtn = createDeleteBtnFor(bookRow);
+        const toggleRead = createToggleReadFor(bookRow);
 
-        bookRow.append(title, author, pages, read, deleteBtn);
+        bookRow.append(title, author, pages, toggleRead, deleteBtn);
         libraryDisplay.append(bookRow);
     })
 }
@@ -58,6 +57,29 @@ function createDeleteBtnFor(bookRow) {
     });
 
     return deleteBtn;
+}
+
+function createToggleReadFor(bookRow) {
+    const index = bookRow.dataset.index;
+    const id = `bookRow${index}`;
+
+    const checkBox = document.createElement('input');
+    checkBox.setAttribute('type', 'checkbox');
+    checkBox.setAttribute('id', id);
+    checkBox.checked = library[index].read;
+
+    const label = document.createElement('label');
+    label.setAttribute('for', id);
+    label.innerText = 'Read';
+
+    const toggleRead = document.createElement('td');
+    toggleRead.append(checkBox, label);
+    toggleRead.addEventListener('click', () => {
+        library[index].toggleRead();
+        updateLibraryDisplay();
+    });
+
+    return toggleRead;
 }
 
 openBookModal.addEventListener('click', () => {
