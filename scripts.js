@@ -37,15 +37,15 @@ function updateLibraryDisplay() {
         author.innerText = book.author;
         pages.innerText = book.pages;
 
-        const deleteBtn = createDeleteBtnFor(bookRow);
-        const toggleRead = createToggleReadFor(bookRow);
+        const deleteBtn = createDeleteBtn(bookRow);
+        const toggleRead = createToggleRead(bookRow);
 
         bookRow.append(title, author, pages, toggleRead, deleteBtn);
         libraryDisplay.append(bookRow);
     })
 }
 
-function createDeleteBtnFor(bookRow) {
+function createDeleteBtn(bookRow) {
     const index = bookRow.dataset.index;
 
     const deleteBtn = document.createElement('button');
@@ -59,7 +59,7 @@ function createDeleteBtnFor(bookRow) {
     return deleteBtn;
 }
 
-function createToggleReadFor(bookRow) {
+function createToggleRead(bookRow) {
     const index = bookRow.dataset.index;
     const id = `bookRow${index}`;
 
