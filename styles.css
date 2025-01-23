@@ -32,6 +32,10 @@ img {
   --blue-1: hsl(216, 79%, 53%);
   --blue-2: hsl(216, 79%, 55%);
   --blue-3: hsl(216, 79%, 60%);
+  
+  --green-1: hsl(130, 77%, 40%);
+  --green-2: hsl(130, 77%, 42%);
+  --green-3: hsl(130, 77%, 47%);
 
   --white: hsl(0, 0%, 100%);
 
@@ -45,6 +49,10 @@ img {
   --btn-bg-active: var(--blue-3);
   --btn-shadow: var(--light-shadow-2);
   --btn-shadow-hover: var(--light-shadow-1);
+  
+  --btn-success-bg: var(--green-1);
+  --btn-success-bg-hover: var(--green-2);
+  --btn-success-bg-active: var(--green-3);
 }
 
 .button {
@@ -66,4 +74,16 @@ img {
 
 .button:active {
   background-color: var(--btn-bg-active);
+}
+
+.button--confirm {
+  background-color: var(--btn-success-bg);
+}
+
+.button--confirm:hover {
+  background-color: var(--btn-success-bg-hover);
+}
+
+.button--confirm:active {
+  background-color: var(--btn-success-bg-active);
 }
