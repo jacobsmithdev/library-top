@@ -50,6 +50,7 @@ function createDeleteBtn(bookRow) {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.innerText = "delete";
+    deleteBtn.classList.add('button', 'button--danger')
 
     deleteBtn.addEventListener('click', () => {
         library.splice(index, 1);

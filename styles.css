@@ -36,6 +36,10 @@ img {
   --green-1: hsl(130, 77%, 40%);
   --green-2: hsl(130, 77%, 42%);
   --green-3: hsl(130, 77%, 47%);
+  
+  --red-1: hsl(0, 100%, 65%);
+  --red-2: hsl(0, 100%, 67%);
+  --red-3: hsl(0, 100%, 72%);
 
   --white: hsl(0, 0%, 100%);
 
@@ -53,6 +57,10 @@ img {
   --btn-success-bg: var(--green-1);
   --btn-success-bg-hover: var(--green-2);
   --btn-success-bg-active: var(--green-3);
+
+  --btn-danger-bg: var(--red-1);
+  --btn-danger-bg-hover: var(--red-2);
+  --btn-danger-bg-active: var(--red-3);
 }
 
 .button {
@@ -86,4 +94,17 @@ img {
 
 .button--confirm:active {
   background-color: var(--btn-success-bg-active);
+}
+
+.button--danger {
+  background-color: var(--btn-danger-bg);
+  border-radius: 0px;
+}
+
+.button--danger:hover {
+  background-color: var(--btn-danger-bg-hover);
+}
+
+.button--danger:active {
+  background-color: var(--btn-danger-bg-active);
 }
