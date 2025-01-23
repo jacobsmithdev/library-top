@@ -13,14 +13,20 @@
         <form method="dialog">
             <button formmethod="dialog">Close</button>
 
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" autofocus >
+            <div class="form-field">
+                <label class="form-field__label" for="title">Title</label>
+                <input class="form-field__input" type="text" name="title" id="title" autofocus >
+            </div>
 
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author">
+            <div class="form-field">
+                <label class="form-field__label" for="author">Author</label>
+                <input class="form-field__input" type="text" name="author" id="author">
+            </div>
 
-            <label for="pages">Pages</label>
-            <input type="number" name="pages" id="pages">
+            <div class="form-field">
+                <label class="form-field__label" for="pages">Pages</label>
+                <input class="form-field__input" type="number" name="pages" id="pages">
+            </div>
 
             <label for="read">Read</label>
             <input type="checkbox" name="read" id="read">

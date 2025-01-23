@@ -44,6 +44,8 @@ img {
 
   --white: hsl(0, 0%, 100%);
 
+  --gray: hsl(0, 0%, 65%);
+
   --light-shadow-1: hsla(216, 79%, 15%, 0.4);
   --light-shadow-2: hsla(216, 79%, 15%, 0.2);
 
@@ -62,6 +64,9 @@ img {
   --btn-danger-bg: var(--red-1);
   --btn-danger-bg-hover: var(--red-2);
   --btn-danger-bg-active: var(--red-3);
+
+  --form-field-outline: var(--gray);
+  --form-field-outline-focus: var(--blue-3);
 }
 
 /* Default Button Styling */
@@ -111,4 +116,26 @@ img {
 
 .button--danger:active {
   background-color: var(--btn-danger-bg-active);
+}
+
+/* Form Field */
+.form-field {
+  display: grid;
+  gap: 2px;
+}
+
+.form-field__input {
+  border: none;
+  border-radius: 0px;
+  outline: 1px solid var(--form-field-outline);
+  padding: 4px 8px;
+}
+
+.form-field__input:focus {
+  outline: 2px solid var(--form-field-outline-focus);
+}
+
+.form-field__label {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
