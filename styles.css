@@ -27,6 +27,7 @@ img {
   height: auto;
 }
 
+/* VARIABLE DECLARATIONS */
 :root {
   /* Color Variables */
   --blue-1: hsl(216, 79%, 53%);
@@ -63,6 +64,7 @@ img {
   --btn-danger-bg-active: var(--red-3);
 }
 
+/* Default Button Styling */
 .button {
   background-color: var(--btn-bg);
   border: none;
@@ -84,6 +86,7 @@ img {
   background-color: var(--btn-bg-active);
 }
 
+/* Confirm Button Styling */
 .button--confirm {
   background-color: var(--btn-success-bg);
 }
@@ -96,6 +99,7 @@ img {
   background-color: var(--btn-success-bg-active);
 }
 
+/* Danger Button Styling */
 .button--danger {
   background-color: var(--btn-danger-bg);
   border-radius: 0px;
