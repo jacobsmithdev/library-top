@@ -67,6 +67,8 @@ img {
 
   --form-field-outline: var(--gray);
   --form-field-outline-focus: var(--blue-3);
+
+  --modal-shadow: var(--light-shadow-1);
 }
 
 /* Default Button Styling */
@@ -152,4 +154,23 @@ img {
 
 .form-field--checkbox .form-field__input:focus {
   outline: 2px solid var(--form-field-outline-focus);
+}
+
+/* Modal Layout */
+.form-modal {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px var(--modal-shadow);
+  padding: 8px;
+}
+
+.form-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.form-modal__close-btn {
+  align-self: flex-end;
 }
