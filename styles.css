@@ -65,6 +65,9 @@ img {
   --btn-danger-bg-hover: var(--red-2);
   --btn-danger-bg-active: var(--red-3);
 
+  --btn-close-bg: var(--gray);
+  --btn-close-text: var(--white);
+
   --form-field-outline: var(--gray);
   --form-field-outline-focus: var(--blue-3);
 
@@ -118,6 +121,20 @@ img {
 
 .button--danger:active {
   background-color: var(--btn-danger-bg-active);
+}
+
+/* Close Button */
+.close-btn {
+  background-color: var(--btn-close-bg);
+  border: none;
+  border-radius: 12px;
+  color: var(--btn-close-text);
+  height: 24px;
+  width: 24px;
+}
+
+.close-btn:hover {
+  cursor: pointer;
 }
 
 /* Form Field */
