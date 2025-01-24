@@ -46,8 +46,8 @@ img {
 
   --gray: hsl(0, 0%, 65%);
 
-  --light-shadow-1: hsla(216, 79%, 15%, 0.4);
-  --light-shadow-2: hsla(216, 79%, 15%, 0.2);
+  --light-shadow-1: hsla(216, 0%, 15%, 0.4);
+  --light-shadow-2: hsla(216, 0%, 15%, 0.2);
 
   /* Functional Variables */
   --btn-text: var(--white);
