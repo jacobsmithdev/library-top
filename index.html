@@ -8,7 +8,6 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <button class="button" id="open-book-modal">Add to Library</button>
     <dialog class="form-modal" id="book-modal">
         <form class="form-modal__form" method="dialog">
             <button class="close-btn form-modal__close-btn" formmethod="dialog">x</button>
@@ -36,18 +35,21 @@
             <button class="button button--confirm" id="add-book" type="submit" formmethod="dialog">Add</button>
         </form>
     </dialog>
-    <table>
-        <caption>Library</caption>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Read</th>
-            </tr>
-        </thead>
-        <tbody id="library-display">
-        </tbody>
-    </table>
+    <div class="layout-wrapper">
+        <button class="button" id="open-book-modal">Add to Library</button>
+        <table class="table">
+            <caption>Library</caption>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody id="library-display">
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
