@@ -43,6 +43,10 @@ img {
   --red-3: hsl(0, 100%, 72%);
 
   --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --light-gray-1: hsl(0, 0%, 90%);
+  --light-gray-2: hsl(0, 0%, 97%);
 
   --gray: hsl(0, 0%, 65%);
 
@@ -74,6 +78,11 @@ img {
   --modal-shadow: var(--light-shadow-1);
 
   --layout-shadow: var(--light-shadow-2);
+
+  --table-row-border: var(--light-gray-1);
+  --table-row-bg-hover: var(--light-gray-2);
+
+  --table-header-border: var(--black);
 }
 
 /* Button */
@@ -204,4 +213,44 @@ img {
   margin: 16px;
   padding: 16px;
   width: 80%;
+}
+
+/* Table Styling */
+.table {
+  border-collapse: collapse;
+}
+
+.table__caption {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.table__row {
+  border-bottom: 2px solid var(--table-row-border);
+}
+
+.table__row:hover {
+  background-color: var(--table-row-bg-hover);
+}
+
+.table__header-row {
+  border-bottom: 2px solid var(--table-header-border);
+}
+
+.table__header {
+  padding: 2px 16px;
+  text-align: left;
+}
+
+.table__header--number {
+  text-align: right;
+}
+
+.table__data {
+  margin: 4px 0;
+  padding: 8px 16px;
+}
+
+.table__data--number {
+  text-align: right;
 }

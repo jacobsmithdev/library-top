@@ -40,6 +40,14 @@ function updateLibraryDisplay() {
         const deleteBtn = createDeleteBtn(bookRow);
         const toggleRead = createToggleRead(bookRow);
 
+        bookRow.classList.add('table__row');
+
+        title.classList.add('table__data');
+        author.classList.add('table__data');
+        pages.classList.add('table__data', 'table__data--number');
+        deleteBtn.classList.add('table__data');
+        toggleRead.classList.add('table__data');
+
         bookRow.append(title, author, pages, toggleRead, deleteBtn);
         libraryDisplay.append(bookRow);
     })
