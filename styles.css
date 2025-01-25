@@ -48,7 +48,8 @@ img {
   --light-gray-1: hsl(0, 0%, 90%);
   --light-gray-2: hsl(0, 0%, 97%);
 
-  --gray: hsl(0, 0%, 65%);
+  --gray-1: hsl(0, 0%, 65%);
+  --gray-2: hsl(0, 0%, 60%);
 
   --light-shadow-1: hsla(216, 0%, 15%, 0.4);
   --light-shadow-2: hsla(216, 0%, 15%, 0.2);
@@ -69,10 +70,10 @@ img {
   --btn-danger-bg-hover: var(--red-2);
   --btn-danger-bg-active: var(--red-3);
 
-  --btn-close-bg: var(--gray);
+  --btn-close-bg: var(--gray-1);
   --btn-close-text: var(--white);
 
-  --form-field-outline: var(--gray);
+  --form-field-outline: var(--gray-1);
   --form-field-outline-focus: var(--blue-3);
 
   --modal-shadow: var(--light-shadow-1);
@@ -83,6 +84,9 @@ img {
   --table-row-bg-hover: var(--light-gray-2);
 
   --table-header-border: var(--black);
+
+  --credit-link-text: var(--gray-1);
+  --credit-link-text-hover: var(--gray-2);
 }
 
 /* Button */
@@ -252,4 +256,21 @@ img {
 
 .table__data--number {
   text-align: right;
+}
+
+.credit {
+  justify-self: center;
+  display: flex;
+  gap: 16px;
+}
+
+.credit__link {
+  text-decoration: none;
+  color: var(--credit-link-text);
+  font-size: 0.9rem;
+}
+
+.credit__link:hover {
+  text-decoration: underline;
+  color: var(--credit-link-text-hover);
 }
