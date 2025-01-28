@@ -2,6 +2,10 @@ const libraryDisplay = document.querySelector('#library-display');
 const openBookModal = document.querySelector('#open-book-modal');
 const bookModal = document.querySelector('#book-modal');
 const addBook = document.querySelector('#add-book');
+const titleInput = document.querySelector('#title');
+const authorInput = document.querySelector('#author');
+const pagesInput = document.querySelector('#pages');
+const readInput = document.querySelector('#read');
 
 const library = [];
 
@@ -96,10 +100,10 @@ openBookModal.addEventListener('click', () => {
 })
 
 addBook.addEventListener('click', () => {
-    const title = document.querySelector('#title').value;
-    const author = document.querySelector('#author').value;
-    const pages = document.querySelector('#pages').value;
-    const read = document.querySelector('#read').checked;
+    const title = titleInput.value;
+    const author = authorInput.value;
+    const pages = pagesInput.value;
+    const read = readInput.checked;
     if (title && author && pages) {
         appendToLibrary(title, author, pages, read);
         updateLibraryDisplay();
