@@ -33,7 +33,8 @@ function updateLibraryDisplay() {
         const bookRow = document.createElement('tr');
         bookRow.dataset.index = index;
         
-        const title = document.createElement('td');
+        const title = document.createElement('th');
+        title.setAttribute('scope', 'row');
         const author = document.createElement('td');
         const pages = document.createElement('td');
 
@@ -46,7 +47,7 @@ function updateLibraryDisplay() {
 
         bookRow.classList.add('table__row');
 
-        title.classList.add('table__data');
+        title.classList.add('table__header');
         author.classList.add('table__data');
         pages.classList.add('table__data', 'table__data--number');
         deleteBtn.classList.add('table__data');
