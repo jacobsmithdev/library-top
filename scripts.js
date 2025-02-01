@@ -6,6 +6,7 @@ const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const pagesInput = document.querySelector('#pages');
 const readInput = document.querySelector('#read');
+const addBookForm = document.querySelector('#add-book-form');
 
 const library = [];
 
@@ -108,6 +109,7 @@ addBookBtn.addEventListener('click', () => {
     if (title && author && pages) {
         appendToLibrary(title, author, pages, read);
         updateLibraryDisplay();
+        addBookForm.reset();
     }
 })
 
