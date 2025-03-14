@@ -15,6 +15,7 @@ class Book {
     author;
     pages;
     read;
+    #id = crypto.randomUUID();
 
     constructor(title, author, pages, read) {
         this.title = title;
@@ -25,6 +26,10 @@ class Book {
 
     toggleRead() {
         this.read = !this.read;
+    }
+
+    get id() {
+        return this.#id;
     }
 }
 
@@ -39,7 +44,7 @@ function updateLibraryDisplay() {
 
     library.forEach((book, index) => {
         const bookRow = document.createElement('tr');
-        bookRow.dataset.index = index;
+        bookRow.dataset.id = book.id;
         
         const title = document.createElement('th');
         title.setAttribute('scope', 'row');
@@ -67,14 +72,15 @@ function updateLibraryDisplay() {
 }
 
 function createDeleteBtn(bookRow) {
-    const index = bookRow.dataset.index;
+    const id = bookRow.dataset.id;
 
     const deleteBtn = document.createElement('button');
     deleteBtn.innerText = "delete";
     deleteBtn.classList.add('button', 'button--danger')
 
     deleteBtn.addEventListener('click', () => {
-        library.splice(index, 1);
+        const bookIndex = library.findIndex(book => book.id === id)
+        library.splice(bookIndex, 1);
         updateLibraryDisplay();
     });
 
@@ -82,7 +88,7 @@ function createDeleteBtn(bookRow) {
 }
 
 function createToggleRead(bookRow) {
-    const index = bookRow.dataset.index;
+    const index = library.findIndex(book => book.id === bookRow.dataset.id);
     const id = `bookRow${index}`;
 
     const checkBox = document.createElement('input');
