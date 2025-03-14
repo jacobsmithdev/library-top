@@ -10,16 +10,23 @@ const addBookForm = document.querySelector('#add-book-form');
 
 const library = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
+    title;
+    author;
+    pages;
+    read;
 
-Book.prototype.toggleRead = function() {
-    this.read = !this.read;
-};
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    toggleRead() {
+        this.read = !this.read;
+    }
+}
 
 function appendToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
