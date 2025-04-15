@@ -2,7 +2,7 @@
 My repository for The Odin Project's [library](https://www.theodinproject.com/lessons/node-path-javascript-library).
 
 ## Live Preview
-See a [live preview](https://jsmith-code.github.io/library-top/).
+See a [live preview](https://jacobsmithdev.github.io/library-top/).
 
 ![site preview](./assets/img/site_preview.png)
 
